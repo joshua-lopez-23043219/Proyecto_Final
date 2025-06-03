@@ -85,7 +85,38 @@
 
         <!-- Aqui comienza el contenido Principal  -->
         <main>
+            <h1 class="main_Title">Panel de Control</h1>
+            <ul class="main_migas">
+                <li> <a href="#"></a></li>
+                <li class="divider"></li>
+                <li> <a href="#" class="active">Bienvenido</a></li>
+            </ul>
 
+            <div class="main_data">
+                <div class="data_content-data">
+                    <h3>Demostracion de consumo de API</h3>
+                    <p>Esta Tabla consume : https:// para obtener los datos que se van a indecsar en la tabla </p>
+
+                    <div class="main_divTable">
+                        <div class="main-div-header">
+                            <button onclick="openModal()" class="main_nuevo-registro">Registrar</button>
+                        </div>
+
+                        <table class="main_divTable-table">
+                            <thead class="main_divTable-table--thead">
+                                <tr>Id</tr>
+                                <tr>Nombre del Producto</tr>
+                                <tr>Precio</tr>
+                                <tr>Categoria</tr>
+                                <tr>Acciones</tr>
+                            </thead>
+
+                            <tbody id="productTableBody"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- Aqui Termina el Contenido Principal  -->
     </section>
