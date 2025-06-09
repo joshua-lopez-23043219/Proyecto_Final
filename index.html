@@ -5,107 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css">
-    <link rel="stylesheet" href="./Style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 
-
 <body>
-    <!-- Menu lateral -->
-    <section id="menuLateral" class="">
-        <a href="#" class=" menuLateral_brand"><i class="bx bxs-smile menuLateral_icon"></i> TECNODATA</a>
-        <ul class="menuLateral_side-menu">
-            <li class="menuLateral_divisor" data-tex="OPERACIONES"></li>
-            <li><a href="#" class="active"> <i class="bx bx-dots-horizontal-rounded menuLateral-icon"></i> Facturar</a>
-            </li>
-            <li><a href="#"> <i class="bx bxs-widget menuLateral-icon"></i>Comprar</a></li>
-            <li><a href="#"> <i class="bx bxs-inbox menuLateral-icon"></i>Inventarios</a></li>
+    <!--Funciona como menu lateral-->
+    <section id="menuLateral">
+        <a href="./index.html" class="menuLateral_brand"><i class="bx bxs-smile menuLateral_icon"></i>TECNODATA</a>
 
-            <ul class="menuLateral_side-dropdown">
+        <ul class="menuLateral__side-menu">
+            <li class="menuLateral__divisor" data-text="OPERACIONES">OPERACIONES</li>
+            <li><a href="./Facturar.html" class="active"><i
+                        class="bx bx-dots-horizontal-rounded menuLateral__icon"></i>Facturar</a>
+            </li>
+            <li><a href="#"><i class="bx bxs-widget menuLateral__icon"></i>Compras</a></li>
+            <li><a href="#"><i class="bx bxs-inbox  menuLateral_icon"></i>Inventario</a><i
+                    class="bx bx-chevron-right menuLateral_icon--right"> </i></li>
+
+            <!--SUB MENU DE NAVEGACION QUE DEPENDE DE INVENTARIOS-->
+            <ul class="menuLateral__side-drowdown">
                 <li><a href="#">Materia Prima</a></li>
                 <li><a href="#">Producto Fabricado</a></li>
             </ul>
 
-
-
-            <li class="menuLateral_divisor" data-tex="OPERACIONES"></li>
-            <!-- sub menu -->
-            <li><a href="#"> <i class="bx bxs-inbox menuLateral-icon"></i>Tablas Catalogos</a></li>
-            <ul class="menuLateral_side-dropdown">
+            <li class="menuLateral__divisor" data-text="CATALOGOS">CATALOGOS</li>
+            <!--SUB MENU DE NAVEGACION QUE DEPENDE DE INVENTARIOS-->
+            <li><a href="#"><i class="bx bx-table  menuLateral_icon"></i>Tabla Catalogos</a><i
+                    class="bx bx-chevron-right menuLateral_icon--right"> </i></li>
+            <ul class="menuLateral__side-drowdown">
                 <li><a href="#">Categoria</a></li>
                 <li><a href="#">Proveedores</a></li>
                 <li><a href="#">Fabricas</a></li>
                 <li><a href="#">Sucursales</a></li>
             </ul>
 
-            <!-- sub menu -->
-            <li><a href="#"> <i class="bx bxs-chart menuLateral-icon"></i>Reportes</a></li>
+            <li><a href="./Reportes.html"><i class="bx bxs-chart  menuLateral__icon"></i>Reportes</a></li>
         </ul>
     </section>
-    <!-- Aqui termina el menu lateral -->
+    <!--Aqui termina el menu lateral-->
 
-
-
-
-    <!-- Aqui la seccion del menu de navegacion y el contedido principal -->
-    <!-- menu de navegacion -->
-    <section id="content" class="">
-        <!-- Aqui comienza el munu de navegacion  -->
+    <!--Aui comienza la seccion del menu de navegacion y contenido principal-->
+    <section id="content">
+        <!--Aqui comienza el menu de navegacion-->
         <nav>
-            <!-- Este es el input buscar-->
-            <form class="nav_form" action="#">
-                <div class="nav_form-group">
-                    <input id="SearchInput" class="nav_form-group--input" type="text" placeholder="Buscar...">
-                    <i class="bx bx-search nav_form-group--input"></i>
+            <i class="bx bx-menu nav__link-sidebar"> </i>
+            <!--Este es el formulario del boton de busqueda-->
+            <form class="nav__form" action="#">
+                <div class="nav__form-group">
+                    <input id="SearchInput" class="nav__form-group--input" type="text" placeholder="Buscar...">
+                    <i class="bx bx-search nav__form-group--icon"></i>
                 </div>
             </form>
-            <!-- Aqui termina el input buscar-->
-            <!-- iconos de notificacion-->
-            <a class="nav_link" href="#"> <i class="bx bxs-bell nav_link"></i> <span class="nav_link-badge">5</span></a>
-            <a class="nav_link" href="#"><i class="bx bxs-message-square-dots nav_link"></i><span
-                    class="nav_link-badge">8</span></a>
-            <!-- foto de perfil -->
-            <span class="nav-divider"></span>
-            <div class="nav_profile">
-                <img src="#" class="nav_profile-img" alt="Foto de Perfil">
-                <ul>
-                    <li><a class="nav_profile--item" href="#"><i class="bx bxs-user-circle nav_link-icon"></i>
-                            Perfil</a></li>
-                    <li><a class="nav_profile--item" href="#"><i class="bx bxs-cog nav_link-icon"></i> Configuracion</a>
-                    </li>
-                    <li><a class="nav_profile--item" href="#"><i class="bx bxs-log-out-circle nav_link-icon"></i> Cerrar
-                            Sesion</a></li>
-                </ul>
-                <i class="bx bx-chevron-down nav_profile--icon"></i>
 
+            <!--Iconos de notificaciones-->
+            <a class="nav__link" href="#">
+                <i class="bx bxs-bell nav__link"></i>
+                <span class=" nav__link-badge">5</span>
+            </a>
+
+            <a class="nav__link" href="#">
+                <i class="bx bxs-message-square-dots nav__link"></i>
+                <span class=" nav__link-badge">8</span>
+            </a>
+
+            <!--Foto de perfil-->
+            <span class="nav__divider">/</span>
+            <div class="nav__profile">
+                <img src="#" class="nav__profile-img">
+                <ul class="nav__profile-link">
+                    <li><a href="#"><i class="bx bxs-user-circle nav__link-icon"></i>Perfil</a></li>
+                    <li><a href="#"><i class="bx bxs-cog"></i>Configuracion</a></li>
+                    <li><a href="#"><i class="bx bxs-log-out-circle"></i>Cerrar Sesion</a></li>
+                </ul>
             </div>
 
         </nav>
-        <!-- Aqui Termina el munu de navegacion  -->
+        <!--Aqui termina el menu de navegacion-->
 
-        <!-- Aqui comienza el contenido Principal  -->
+        <!--Aqui comienza el comtenido principal-->
         <main>
-            <h1 class="main_Title">Panel de Control</h1>
-            <ul class="main_migas">
-                <li> <a href="#"></a></li>
-                <li class="divider"></li>
-                <li> <a href="#" class="active">Bienvenido</a></li>
+            <h1 class="main__title">Panel de Control</h1>
+            <ul class="main__migas">
+                <li><a href="#"></a></li>
+                <li class="divider">/</li>
+                <li><a href="#" class="active">Bienvenido</a></li>
             </ul>
 
-            <div class="main_data">
-                <div class="data_content-data">
-                    <h3>Demostracion de consumo de API</h3>
-                    <p>Esta Tabla consume : https:// para obtener los datos que se van a indecsar en la tabla </p>
-
-                    <div class="main_divTable">
-                        <div class="main-div-header">
-                            <button onclick="openModal()" class="main_nuevo-registro">Registrar</button>
+            <div class="main__data">
+                <div class="data__content-data">
+                    <h3>Desmostracion nde consumo de API</h3>
+                    <p>Esta tabla consume: https://fakestoreapi.com/products para obtener los datps que se indexan en la
+                        tabla</p>
+                    <div class="main__divTable">
+                        <div class="main__div-header">
+                            <button onclick="openModal()" class="main__nuevo-registro">Registrar</button>
                         </div>
 
-                        <table class="main_divTable-table">
-                            <thead class="main_divTable-table--thead">
-                                <tr>Id</tr>
-                                <tr>Nombre del Producto</tr>
+                        <table class="main__divTable-table">
+                            <thead class="main__divTable-table--thead">
+                                <tr>ID</tr>
+                                <tr>Nombre del producto</tr>
                                 <tr>Precio</tr>
                                 <tr>Categoria</tr>
                                 <tr>Acciones</tr>
@@ -113,15 +113,14 @@
 
                             <tbody id="productTableBody"></tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
-        </main>
-        <!-- Aqui Termina el Contenido Principal  -->
-    </section>
-    <!-- Aqui termina el menu de navegacion y el contenido principal-->
 
+        </main>
+        <!--Aqui termina el contenido principal-->
+
+    </section>
 
 </body>
 

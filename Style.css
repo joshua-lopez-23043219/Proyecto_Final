@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    background-color: var(--grey);
+    background: var(--grey);
     overflow-wrap: hidden;
 }
 
@@ -55,6 +55,8 @@ li {
     background-color: darkgray;
 }
 
+
+
 /* Table */
 #menuLateral {
     position: fixed;
@@ -66,7 +68,7 @@ li {
     height: 100%;
     overflow-y: auto;
     scrollbar-width: none;
-    transition: all .3 ease;
+    transition: all .3s ease;
     z-index: 200;
 }
 
@@ -103,7 +105,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6px;
+    margin-right: 6px;
 }
 
 #menuLateral .menuLateral_icon--right {
@@ -265,4 +267,108 @@ nav .nav_link .nav_link-badge {
 
 nav .nav_divider {
     width: 1px;
+    background: var(--grey);
+    height: 12px;
+    display: block;
 }
+
+nav .nav__profile {
+    position: relative;
+}
+
+nav .nav__profile .nav__profile--img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+nav .nav__profile .nav__profile-link {
+    position: absolute;
+    top: (100% + 10px);
+    right: 0;
+    background: var(--light);
+    padding: 10px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 160px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+nav .nav__profile .nav__profile-link.show {
+    opacity: 1;
+    pointer-events: visible;
+    top: 100%;
+}
+
+nav .nav__profile .nav__profile-link a {
+    padding: 10px 16px;
+    display: flex;
+    grid-gap: 10px;
+    font-size: 14px;
+    color: var(--dark);
+    align-items: center;
+    transition: all .3s ease;
+}
+
+nav .nav__profile .nav__profile-link a:hover {
+    background: var(--grey);
+}
+
+/*aqui terminamos con la estilizacion del Nav-Bar*/
+
+/* Aqui inicia el estilo de la etiqueta Main */
+
+main {
+    padding: 24px 20px 20px 20px;
+    width: 100%;
+}
+
+main .main_title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+main .main_migas {
+    display: flex;
+    grid-gap: 6px;
+}
+
+main .main_migas li,
+main .main_migas a {
+    font-size: 14px;
+}
+
+main .main_migas a {
+    color: var(--dark);
+}
+
+main .info_data {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+}
+
+main .info_data .info_data_card {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .05);
+}
+
+main .info_data .info_data--card--head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* main .info_data .info_data_card .info_data--card--head h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark);
+} */
